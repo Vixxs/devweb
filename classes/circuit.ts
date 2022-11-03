@@ -1,4 +1,4 @@
-import Voiture from "./voiture"
+import Voiture from './voiture'
 
 class Circuit {
         private kilometres: number;
@@ -20,6 +20,6 @@ class Circuit {
         }
 
         fin(voiture): string {
-                return 'La voiture ' + ${voiture.marque} + ' a gagné';
+                return 'La voiture ' + voiture.marque + ' a gagné';
         }
 }
