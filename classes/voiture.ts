@@ -1,6 +1,8 @@
-class  Voiture {
-    toString (marque, distance) : string {
-        return `La voiture de la marque ` + marque + ` a parcourru `+ distance+ ` km`
+import { Vehicule } from "./vehicule";
+
+export class Voiture extends Vehicule {
+    toString () : string {
+        return `La voiture de la marque ` + this.marque + ` a parcourru `+ this.km_parcourru+ ` km`
     }
 }
 

@@ -1,25 +1,26 @@
-import Voiture from './voiture'
+import {Voiture} from './voiture'
 
-class Circuit {
+export class Circuit {
         private kilometres: number;
         private voitures: Array<Voiture>;
 
-        constructor() {
-                this.kilometres = 1000;
+        constructor(kilometres: number, voitures: Array<Voiture>) {
+                this.kilometres = kilometres;
+                this.voitures = voitures;
         }
 
         depart(): void {
                 this.voitures.forEach(voiture => {
-                        voiture.demarer();
+                        voiture.demarrer();
                 });
                 this.voitures.forEach(voiture => {
-                        if (voiture.kilometre == this.kilometres) {
-                                voiture.fin();
+                        if (voiture.km_parcourru == this.kilometres) {
+                                this.fin(voiture);
                         }
                 });
         }
 
-        fin(voiture): string {
+        fin(voiture : Voiture): string {
                 return 'La voiture ' + voiture.marque + ' a gagné';
         }
 }

@@ -1,10 +1,10 @@
 import {VehiculeInterface} from '../interfaces/vehiculeInterface';
-abstract class Vehicule implements VehiculeInterface {
+export abstract class Vehicule implements VehiculeInterface {
     public static readonly secondeTraitement = 1;
 
-    private marque: string;
-    private kmh: number;
-    private km_parcourru = 0;
+    public marque: string;
+    public kmh: number;
+    public km_parcourru = 0;
 
     constructor(marque: string, kmh: number){
         this.marque = marque;
@@ -18,6 +18,6 @@ abstract class Vehicule implements VehiculeInterface {
     }
 
     toString(): string{
-        return this.marque;
+        return '';
     }
 }
