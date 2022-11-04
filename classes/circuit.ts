@@ -12,8 +12,6 @@ export class Circuit {
         depart(): void {
                 this.voitures.forEach(voiture => {
                         voiture.demarrer();
-                });
-                this.voitures.forEach(voiture => {
                         if (voiture.km_parcourru == this.kilometres) {
                                 this.fin(voiture);
                         }

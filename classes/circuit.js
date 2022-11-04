@@ -10,8 +10,6 @@ var Circuit = /** @class */ (function () {
         var _this = this;
         this.voitures.forEach(function (voiture) {
             voiture.demarrer();
-        });
-        this.voitures.forEach(function (voiture) {
             if (voiture.km_parcourru == _this.kilometres) {
                 _this.fin(voiture);
             }
